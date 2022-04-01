@@ -34,3 +34,19 @@ $queried_object = get_queried_object();
 @ini_set( 'memory_limit', '2048M' );
 @ini_set( 'max_execution_time', '3000' );
 @ini_set( 'max_input_time', '3000' );
+
+------------------------------------
+
+
+$orderId = 10;
+$orderDetail = new WC_Order( $order_id );
+$orderDetail->update_status("wc-completed", 'Completed', TRUE);
+
+
+wc-pending   For Pending payment
+wc-processing   For Processing
+wc-on-hold   For On hold
+wc-completed   For Completed
+wc-cancelled   For Cancelled
+wc-refunded   For Refunded
+wc-failed   For Failed
